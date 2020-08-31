@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends "web_app/index.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block body-block %}
+{% block button-block %}
+ {% endblock %}
+<div class="container_12">
+  <div class="jumbotron">
+    <form  method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-row">
+            <div class="form-group col-md-6 mb-0">
+              {{ form_detail.name|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-6 mb-0">
+              {{ form_detail.phone_no|as_crispy_field }}
+            </div>
+          </div>
+          <div class="form-row">
+          <div class="form-group col-md-6 mb-0">
+            {{ form_detail.email|as_crispy_field }}
+          </div>
+          <div class="form-group col-md-6 mb-0">
+            {{ form_detail.pet_name|as_crispy_field }}
+          </div>
+        </div>
+        {{ form_detail.address|as_crispy_field }}
+        {{ form_detail.description|as_crispy_field }}
+        <div class="form-row">
+        <div class="form-group col-md-6 mb-0">
+          {{ form_detail.pet_type|as_crispy_field }}
+        </div>
+        <div class="form-group col-md-6 mb-0">
+          {{ form_detail.status|as_crispy_field }}
+        </div>
+      </div>
+
+            <p>{{ form.non_field_errors }}</p>
+            <p>{{ form.docfile.label_tag }} </p>
+            <p>
+                    {{ form.docfile.errors }}
+                    {{ form.docfile }}
+            </p>
+
+            <p class="text-center"><input type="submit" value="Upload" /></p>
+    </form>
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<title>Free Pet Adoption</title>
+<meta charset="utf-8">
+<link rel="icon" href="{% static "images/favicon.ico" %}">
+<link rel="shortcut icon" href="{% static "images/favicon.ico" %}">
+<link rel="stylesheet" href="{% static "css/style.css" %}">
+<link rel="stylesheet" href="{% static "css/slider.css" %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--<script src="{% static "js/jquery.js" %}"></script>
+<script src="{% static "js/jquery-migrate-1.1.1.js" %}"></script>
+<script src="{% static "js/superfish.js" %}"></script>
+<script src="{% static "js/jquery.carouFredSel-6.1.0-packed.js" %}"></script>
+<script src="{% static "js/jquery.equalheights.js" %}"></script>
+<script src="{% static "js/jquery.easing.1.3.js" %}"></script>
+<script src="{% static "js/tms-0.4.1.js" %}"></script>
+<script src="{% static "js/jquery.ui.totop.js" %}"></script>
+<script>
+$(window).load(function () {
+    $('.slider')._TMS({
+        show: 0,
+        pauseOnHover: false,
+        prevBu: '.prev',
+        nextBu: '.next',
+        playBu: false,
+        duration: 800,
+        preset: 'fade',
+        pagination: true, //'.pagination',true,'<ul></ul>'
+        pagNums: false,
+        slideshow: 8000,
+        numStatus: false,
+        banners: true,
+        waitBannerAnimation: false,
+        progressBar: false
+    })
+});
+$(window).load(function () {
+    $('.carousel1').carouFredSel({
+        auto: false,
+        prev: '.prev',
+        next: '.next',
+        width: 960,
+        items: {
+            visible: {
+                min: 3,
+                max: 3
+            },
+            height: 'auto',
+            width: 300,
+        },
+        responsive: true,
+        scroll: 1,
+        mousewheel: false,
+        swipe: {
+            onMouse: true,
+            onTouch: true
+        }
+    });
+});
+jQuery(document).ready(function () {
+    $().UItoTop({
+        easingType: 'easeOutQuart'
+    });
+});
+</script>-->
+<!--[if lt IE 9]>
+<script src="{% static "js/html5shiv.js" %}"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+<![endif]-->
+</head>
+<body class="page1">
+<header>
+  <div class="container_12">
+    <div class="grid_12">
+      <h1><a href="index.html"><img src="{% static "images/logo.png" %}" alt=""></a> </h1>
+      <div class="menu_block">
+        <nav>
+          <ul class="sf-menu">
+            <li class="current"><a href="{% url "web_app:index" %}">Home</a></li>
+            {% block button-block %}
+            <li class="current"><a href="#Category">Category</a></li>
+            {% endblock %}
+
+            <li><a href="{% url "web_app:upload_pet" %}">Upload your Pet</a></li>
+            <li><a href="{% url "web_app:blog" %}">Blog</a></li>
+            <li><a href="{% url "web_app:contacts" %}">Contacts </a></li>
+          </ul>
+        </nav>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</header>-->
+
+{% block body-block %}
+<div class="container_12">
+
+<div id="myCarousel" class="carousel slide carousel-fade " data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+
+    <div class="item active">
+      <img class="d-block w-100" src="{% static "images/final1.jpeg" %}" alt="Los Angeles" style="width:100%;">
+      <div class="mask rgba-black-strong"></div>
+      <div class="carousel-caption">
+        <h3>They Need Your Love and Care</h4>
+          <h5>It is so easy to make them happy</h5>
+
+      </div>
+
+    </div>
+
+    <div class="item">
+      <img class="d-block w-100" src="{% static "images/final2.jpeg" %}" alt="Chicago" style="width:100%;">
+      <div class="mask rgba-black-strong"></div>
+      <div class="carousel-caption">
+        <h3>They Need Your Love and Care</h4>
+          <h5>It is so easy to make them happy</h5>
+      </div>
+    </div>
+
+    <div class="item">
+      <img class="d-block w-100" src="{% static "images/final3.jpeg" %}" alt="New York" style="width:100%;">
+      <div class="mask rgba-black-strong"></div>
+      <div class="carousel-caption">
+        <h3>They Need Your Love and Care</h4>
+          <h5>It is so easy to make them happy</h5>
+      </div>
+    </div>
+    <div class="item">
+      <img class="d-block w-100" src="{% static "images/final4.jpeg" %}" alt="New York" style="width:100%;">
+      <div class="mask rgba-black-strong"></div>
+      <div class="carousel-caption">
+        <h3>They Need Your Love and Care</h4>
+          <h5>It is so easy to make them happy</h5>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
+<div class="page1_block">
+  <div class="container_12">
+    <div class="grid_6">
+      <h2>Welcome to Our Site</h2>
+      <br>
+      <img src="{% static "images/page1_img5.jpg" %}" alt="" class="img_inner fleft">
+      <div class="extra_wrapper style1">
+        <p class="text1">Animals are slaughtered for food, they are used in scientific research, they are kept (in zoos, farms, circuses, etc.), and human activities affect the welfare and survival of these species.</p>
+      They should also have proper respect and love in these society </div>
+      <div class="clear"></div>
+      In order to respect them in this society, t aftr hcfiosfdyfjshgah<br>
+      <a href="#" class="btn">More</a> </div>
+    <div class="grid_5 prefix_1">
+      <h2 class="ic1">Animal Welfare</h2>
+      <ul class="list">
+        <li> <span style="background:none;">
+          <img src="{% static "images/people_for_animals.png" %}" alt="PETA">
+          </span>
+          <div class="extra_wrapper">
+            <div class="col1"><a href="#">Duis posuere consectetur pellentesqe;</a>
+              <time datetime="2045-01-01">April 27.03.45</time>
+            </div>
+            Sed nisi turpis, pellentesque at ultrices in dapibus in magna. Nunc easi diam risus,placerat ut scelerisque suscipit eu ante. Nullam vitae dolor ullcper felises</div>
+        </li>
+        <li> <span style="background:none;" >
+          <img src="{% static "images/peta_logo.png" %}" alt="PETA">
+          </span>
+          <div class="extra_wrapper">
+            <div class="col1"><a href="#">Kuuis posuere consectetur pellentes;</a>
+              <time datetime="2045-01-01">April 28.03.45</time>
+            </div>
+            Eed nisi turpis, pellentesque at ultrices in dapibus in magna. Nunc easi diam risulacerat ut scelerisque et suscipit eu ante. Nullam vitae dolor ullcper felises. </div>
+        </li>
+        <li> <span style="background:none;">
+          <img src="{% static "images/blue_cross.jpg" %}" alt="PETA">
+          </span>
+          <div class="extra_wrapper">
+            <div class="col1"><a href="#">Opuis posuere honsectetur pellentesyt;</a>
+              <time datetime="2045-01-01">April 29.03.45</time>
+            </div>
+            Koed nisi turpis, pellentesque at ultrices in dapibus in magna. Nunc easi diam risujo placerat ut scelerisque et suscipit eu ante. Ullam vitae dolor ullcper felises. </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="content page1">
+  <div class="container_12" id="Category">
+    <div class="grid_12">
+      <h2>Select Category</h2>
+    </div>
+    <div class="clear"></div>
+    <ul>
+      <li class="grid_4"> <a href="{% url "web_app:search" %}">
+        <img src="{% static "images/carousel1_img4.jpg" %}" alt="" class="img_inner fleft"></a>
+        <div class="extra_wrapper pad1">
+          <p class="col2 text-primary">Adopt For Dogs </p>
+          Dogs are often called "man's best friend" because they fit in with human life.Dogs can serve people in many ways. </div>
+      </li>
+      <li class="grid_4"> <a href="{% url "web_app:cat" %}">
+         <img src="{% static "images/carousel1_img5.jpg" %}" alt="" class="img_inner fleft"></a>
+        <div class="extra_wrapper pad1">
+          <p class="col2 text-primary">Adopt For Cats</p>
+          The cat is a domestic species of small carnivorous mammal. It is the only domesticated species in the family Felidae . </div>
+      </li>
+      <li class="grid_4">  <a href="{% url "web_app:bird" %}">
+        <img src="{% static "images/carousel1_img2.jpg" %}" alt="" class="img_inner fleft"></a>
+        <div class="extra_wrapper pad1">
+          <p class="col2 text-primary">Adopt For Birds</p>
+          Birds are a group of warm-blooded vertebrates constituting the class Aves, characterized by feathers, the laying of hard-shelled eggs,etc. </div>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
+<footer>
+<div class="bottom_block">
+  <div class="container_12">
+
+      <h2>To Do With Stray Dog </h2>
+      <br>
+      Report the stray dog to the council. They will alert the dog warden whose responsibility it is to fetch the dog.
+If it is safe and the dog is friendly, check whether the dog is wearing a tag on its collar. If so you can call the phone number direct.
+Take the dog yourself to the nearest vets who will scan the dog’s microchip. By law, every dog should be microchipped and therefore its owner traceable. The vets may offer to keep the dog whilst awaiting the dog warden, but they do not have to.
+Check listings and add details on missing pet websites and local social media pages. The RSPCA will refer the public to the “Pets Located” website.
+You can take the dog home with you temporarily but by law you cannot keep it.
+If you decide to approach it/ take it home, beware it may be scared and you cannot predict its temperament. Do not take chances and if in doubt do not approach the dog, instead, report it and await the arrival of the dog warden.
+</div>
+</br>
+<p class="text-center">To Know More About Many Animals<a href="https://www.thehealthypetclub.co.uk/top-pet-care-tips/" >Click Here</a></p>
+  <!--  <div class="grid_4 prefix_2">
+      <h2 class="ic1">Any Question?</h2>
+      <img src="{% static "images/page1_img4.jpg" %}" alt="" class="fleft img_inner">
+      <div class="extra_wrapper">
+        <div class="cont"> Call Us Free: <span>+1 800 559 6580</span> </div>
+      </div>
+      <div class="clear"></div>
+      Nunc fringilla, diam sit amet adipi scing bibendum turpis velit feugiat urna, et pharetra neque nisi ac nunc. Viv amus est quam dapibus ullamco rper imperdiet nec euismod ut arcu. Nulla facilisi. Etiam mauris. </div>
+  </div>
+</div>
+<footer>
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="socials"> <a href="#"></a> <a href="#"></a> <a href="#"></a> <a href="#"></a> </div>
+      <p>Pet Club &copy; 2045 | <a href="#">Privacy Policy</a> | Design by: <a href="http://www.templatemonster.com/">TemplateMonster.com</a></p>
+    </div>-->
+    <div class="clear"></div>
+  </div>
+</footer>
+</body>
+</html>
